@@ -14,10 +14,6 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({ email }),
     }
   );
-  const text = await response.text();
-  console.log("STATUS:", response.status);
-  console.log("HEADERS:", [...response.headers]);
-  console.log("RESPOSTA CRUA:", text);
 });
 
 const mobileMenu = document.querySelector(".mobile-menu");
