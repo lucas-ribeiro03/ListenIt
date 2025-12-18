@@ -11,8 +11,10 @@ form.addEventListener("submit", async (e) => {
     },
     body: JSON.stringify({ email }),
   });
-  const data = await response.json();
-  console.log(data);
+  const text = await response.text();
+  console.log("STATUS:", response.status);
+  console.log("HEADERS:", [...response.headers]);
+  console.log("RESPOSTA CRUA:", text);
 });
 
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -20,7 +22,6 @@ const mobileNav = document.querySelector(".mobile-nav-list");
 const closeMobileNav = document.querySelector(".mobile-nav-list button");
 
 mobileMenu.addEventListener("click", () => {
-  console.log("clicando");
   if (mobileMenu.classList.contains("active")) {
     mobileNav.classList.remove("active");
   } else {
