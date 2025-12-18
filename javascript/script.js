@@ -4,13 +4,16 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   console.log("FORM ENVIADO");
   const email = e.target.email.value;
-  const response = await fetch("/api/email/free-trial", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email }),
-  });
+  const response = await fetch(
+    "https://listenit-backend-lemon.vercel.app/api/email/free-trial",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    }
+  );
   const text = await response.text();
   console.log("STATUS:", response.status);
   console.log("HEADERS:", [...response.headers]);
