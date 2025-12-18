@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #3a7bff;
+  --secondary-color: #8a5bff;
+  --neutral-color: #1a1d25;
+  --soft-neutral: #a6aabb;
+  --light-color: #f4f6fa;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--light-color);
+}
+
+body {
+  background-color: #0c0e12;
+  overflow-x: hidden;
+}
+
+.button {
+  border: none;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--light-color);
+  padding: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all ease 0.2s;
+}
+
+.button:hover {
+  background-color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+  section {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  section {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .button {
+    padding: 9px;
+    font-size: 10px;
+  }
+
+  section {
+    padding: 2rem 4rem;
+  }
+}

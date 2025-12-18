@@ -1,0 +1,78 @@
+#plans {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid var(--soft-neutral);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.card-item .fa-circle-check {
+  color: green;
+}
+
+.card-item .fa-circle-xmark {
+  color: red;
+}
+
+.card-plan .price {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.card-plan h1 {
+  position: relative;
+}
+
+.card-plan h1 span {
+  position: absolute;
+  font-size: 10px;
+  color: var(--soft-neutral);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-plan button {
+  width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+  #plans {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .card-plan {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #plans {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}

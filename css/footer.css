@@ -1,0 +1,20 @@
+#footer {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social {
+  padding: 10px;
+  font-size: 25px;
+  transition: all 0.4s;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}

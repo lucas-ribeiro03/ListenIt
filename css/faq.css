@@ -1,0 +1,75 @@
+#faq {
+  display: flex;
+  justify-content: start;
+}
+
+.accordion {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 100%;
+}
+details {
+  display: block;
+  width: auto;
+  border: 1px solid var(--soft-neutral);
+  margin: 0 4rem;
+}
+
+details p {
+  padding-left: 30px;
+}
+
+summary {
+  display: flex;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+summary:before {
+  content: ">";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: 0;
+  width: 20px;
+  text-align: center;
+}
+
+details[open] summary:before {
+  content: "-";
+}
+
+@media screen and (max-width: 990px) {
+  details {
+    width: 100%;
+    padding: 12px;
+  }
+
+  details p {
+    padding: 0;
+  }
+
+  .accordion {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  details {
+    width: 100%;
+    padding: 12px;
+  }
+
+  details p {
+    padding: 0;
+  }
+
+  .accordion {
+    align-items: center;
+  }
+}
